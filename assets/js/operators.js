@@ -13,7 +13,7 @@ console.log(resultTask3);
 
 let resultTask4 = resultTask3 / 2.687;
 console.log(resultTask4);
-let remainder = resultTask4 % 3;
+let remainder = resultTask4 % 2.687;
 console.log(remainder);
 
 let stringResultTask4 = '' + resultTask4;
