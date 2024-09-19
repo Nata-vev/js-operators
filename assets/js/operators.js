@@ -18,3 +18,4 @@ console.log(remainder);
 
 let stringResultTask4 = '' + resultTask4;
 console.log(stringResultTask4);
+
