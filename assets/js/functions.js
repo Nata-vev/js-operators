@@ -3,7 +3,7 @@
 const getMinNumber = function (number1, number2) {
   if (typeof number1 !== "number" ||
     typeof number2 !== "number" ||
-    isNan(number1 - number2)) {
+    isNaN(number1 - number2)) {
     return null;
   }
   if (number1 > number2) {
@@ -23,7 +23,7 @@ console.log(getMinNumber(4, 5));
 //2. Створити функцію, яка буде отимувати вік людини і казати, повнолітня вона, чи ні. Зробити на початку перевірки, які мають стежити за тим щоб у функцію не передали некорректні дані при її запуску. У випадку передачі хоч одного некорректного параметру фунція має одразу повернути null.
 
 const isAdult = function (age) {
-  if (typeof age !== 'number' || isNan(age)) {
+  if (typeof age !== 'number' || isNaN(age)) {
     return null;
   }
   return age >= 18;
@@ -34,7 +34,7 @@ console.log(isAdult(35));
 // Зробити на початку перевірки, які мають стежити за тим щоб у функцію не передали некорректні дані при її запуску. У випадку передачі хоч одного некорректного параметру фунція має одразу повернути null.
 
 const getDiscountPrice = function (price) {
-  if (typeof price !== 'number' || isNan(price)) {
+  if (typeof price !== 'number' || isNaN(price)) {
     return null;
   }
   if (price >= 1500) {
@@ -57,7 +57,7 @@ console.log(getDiscountPrice(2300));
 // Зробити на початку перевірки, які мають стежити за тим щоб у функцію не передали некорректні дані при її запуску. У випадку передачі хоч одного некорректного параметру фунція має одразу повернути null.
 
 const isEven = function (number) {
-  if (typeof number !== 'number' || isNan(number)) {
+  if (typeof number !== 'number' || isNaN(number)) {
     return null;
   }
   return number % 2 === 0;
