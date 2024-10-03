@@ -1,11 +1,12 @@
 // 1. Створити функцію, яка буде знаходити та повертати найменьше з двох чисел. Зробити на початку перевірки, які мають стежити за тим щоб у функцію не передали некорректні дані при її запуску. У випадку передачі хоч одного некорректного параметру фунція має одразу повернути null.
 
 const getMinNumber = function (number1, number2) {
-  if (typeof number1 !== "number" ||
-    typeof number2 !== "number" ||
-    isNaN(number1 - number2)) {
-    return null;
+  if (typeof number1 !== "number" || isNaN(number1)) {
+    throw new TypeError(' The number1  must be correct');
   }
+  if (typeof number2 !== 'number' || isNaN(number2)) {
+  throw new TypeError(' The number2 must be correct');
+}
   if (number1 > number2) {
     return number2;
   } else {
@@ -24,7 +25,7 @@ console.log(getMinNumber(4, 5));
 
 const isAdult = function (age) {
   if (typeof age !== 'number' || isNaN(age)) {
-    return null;
+    throw new TypeError(' The age must be correct');
   }
   return age >= 18;
 }
@@ -35,7 +36,7 @@ console.log(isAdult(35));
 
 const getDiscountPrice = function (price) {
   if (typeof price !== 'number' || isNaN(price)) {
-    return null;
+    throw new TypeError(' The price  must be correct');
   }
   if (price >= 1500) {
     return price - (price / 100 * 10);
@@ -58,7 +59,7 @@ console.log(getDiscountPrice(2300));
 
 const isEven = function (number) {
   if (typeof number !== 'number' || isNaN(number)) {
-    return null;
+    throw new TypeError(' The number  must be correct');
   }
   return number % 2 === 0;
 };
